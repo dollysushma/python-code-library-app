@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: sushmatt/pyappauto:db
+    image: shaikmustafa/arshad:db
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: sushmatt/pyappauto:auth
+    image: shaikmustafa/arshad:auth
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: sushmatt/pyappauto:book
+    image: shaikmustafa/arshad:book
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: sushmat/pyappauto:borrow
+    image: shaikmustafa/arshad:borrow
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: sushmat/pyappauto:frontend
+    image: shaikmustafa/arshad:frontend
     deploy:
       replicas: 1
     ports:
